@@ -25,3 +25,36 @@ python manage.py startapp [name of app]
 ```
 
 after starting app go to your main directory and in settings.py at section `INSTALLED_APP` put name of new app you made.
+
+## urls
+
+for showing your app in your project you must make an `urls.py` file in your application directory. after that in `urls.py` app make a list:
+
+```python
+from django.urls import path
+from . import views
+
+urlpatterns= [
+  path('[urls adress]', views.index)
+]
+```
+
+then in the main `urls.py` file do this:
+
+```python
+from django.urls import path, include
+
+urlpatterns= [
+  path('admin/', admin.site.urls)
+  path('[name of your app]/', include('[name of your app].urls'))
+]
+```
+
+## views
+
+```python
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse("this is django curse")
+```
