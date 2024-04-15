@@ -1,5 +1,5 @@
 # django_totarial
 
-```
-hi
+``py
+print("hello world")
 `
