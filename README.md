@@ -1,6 +1,11 @@
 # django_totarial
 
-## create a project
+* [notes](#notes)
+* [status responses](#status)
+
+## notes
+
+### create a project
 
 for creating a project using this command:
 
@@ -8,7 +13,7 @@ for creating a project using this command:
 django-admin startproject [mysite]
 ```
 
-## run server
+### run server
 
 for running server use this command:
 
@@ -16,7 +21,7 @@ for running server use this command:
 python manage.py runserver
 ```
 
-## starting app
+### starting app
 
 for starting an app use this command:
 
@@ -26,7 +31,7 @@ python manage.py startapp [name of app]
 
 after starting app go to your main directory and in settings.py at section `INSTALLED_APP` put name of new app you made.
 
-## urls
+### urls
 
 for showing your app in your project you must make an `urls.py` file in your application directory. after that in `urls.py` app make a list:
 
@@ -50,7 +55,9 @@ urlpatterns= [
 ]
 ```
 
-## views
+### views
+
+for showing a view, you must do like this(the name of function is optional):
 
 ```python
 from django.http import HttpResponse
@@ -58,3 +65,10 @@ from django.http import HttpResponse
 def index(request):
     return HttpResponse("this is django curse")
 ```
+
+## status responses
+
+for responses that get from network has several ranges:
+
+1. 200: it means ok
+2. 404: the page isn't exist
