@@ -1,5 +1,7 @@
 # django_totarial
 
-``py
-print("hello world")
-`
+- [run server](#running)
+
+## run server {running}
+
+for running server use this command.
