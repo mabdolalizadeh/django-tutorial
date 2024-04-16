@@ -55,6 +55,17 @@ urlpatterns= [
 ]
 ```
 
+or you can give a name to each url like this:
+
+```python
+from django.urls import path
+from . import views
+
+urlpatterns= [
+  path('[urls adress]', views.index, name='[a unic name]')
+]
+```
+
 #### dynamic urls
 
 for dynamic urls, first do like this in `views.py` of application:
@@ -72,6 +83,14 @@ urlpatterns= [
 ]
 ```
 
+for getting name url by name you can use this pattern:
+
+```python
+from django.urls import reverse
+
+redirect = reverse('[name of url]')
+```
+
 ### views
 
 for showing a view, you must do like this(the name of function is optional):
@@ -83,13 +102,22 @@ def index(request):
     return HttpResponse("this is django curse")
 ```
 
-we something that name is `HttpResponseRedirect` that redirect to another page for example:
+we something that name is `HttpResponseRedirect` that redirect to another page for example: 
 
 ```python
 from django.http import HttpResponseRedirect
 
 def index(request):
-    retunr HttpResponseRedirect('[page that you want]')
+    return HttpResponseRedirect('[page that you want]')
+```
+
+another good thing is `HttpResponseNotFound` for undefined pages:
+
+```python
+from django.http import HttpResponseNotFound
+
+def index(request):
+    return HttpResponseNotFound('[anything you want]')
 ```
 
 ## status responses
@@ -98,3 +126,4 @@ for responses that get from network has several ranges:
 
 1. 200: it means ok
 2. 404: the page isn't exist
+3. 302: means redirect
