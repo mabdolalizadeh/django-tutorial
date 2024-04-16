@@ -1,7 +1,7 @@
 # django_totarial
 
 * [notes](#notes)
-* [status responses](#status)
+* [status responses](#status_responses)
 
 ## notes
 
