@@ -55,6 +55,23 @@ urlpatterns= [
 ]
 ```
 
+#### dynamic urls
+
+for dynamic urls, first do like this in `views.py` of application:
+
+```python
+def dynamic(request, [name of dynamic url]):
+    return HttpResponse()
+```
+
+then in `urls.py` of application:
+
+```python
+urlpatterns= [
+  path('<[type]:[name of dynamic url]>', views.dynamic)
+]
+```
+
 ### views
 
 for showing a view, you must do like this(the name of function is optional):
@@ -64,6 +81,15 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse("this is django curse")
+```
+
+we something that name is `HttpResponseRedirect` that redirect to another page for example:
+
+```python
+from django.http import HttpResponseRedirect
+
+def index(request):
+    retunr HttpResponseRedirect('[page that you want]')
 ```
 
 ## status responses
