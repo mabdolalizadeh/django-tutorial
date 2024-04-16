@@ -1,7 +1,7 @@
 # django_totarial
 
 * [notes](#notes)
-* [status responses](#status_responses)
+* [statuses](#status)
 
 ## notes
 
@@ -102,7 +102,7 @@ def index(request):
     return HttpResponse("this is django curse")
 ```
 
-we something that name is `HttpResponseRedirect` that redirect to another page for example: 
+we something that name is `HttpResponseRedirect` that redirect to another page for example:
 
 ```python
 from django.http import HttpResponseRedirect
@@ -120,7 +120,7 @@ def index(request):
     return HttpResponseNotFound('[anything you want]')
 ```
 
-## status responses
+## statuses
 
 for responses that get from network has several ranges:
 
