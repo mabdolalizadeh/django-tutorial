@@ -1,4 +1,4 @@
-# django_totarial
+# django tutorial
 
 * [notes](#notes)
 * [statuses](#status)
