@@ -1,7 +1,7 @@
 # django tutorial
 
 * [notes](#notes)
-* [statuses](#status)
+* [statuses](#statuses)
 
 ## notes
 
