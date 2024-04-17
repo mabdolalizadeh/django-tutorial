@@ -189,6 +189,16 @@ for add filter to your data use this syntax:
 
 if you want to know about what filter we have visit [this](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/).
 
+##### tags
+
+for puting python code in your html file you can use tags (this examples is just for loop. you can see other tags [here]([https://](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/)https://)):
+
+```python
+{% for n in [list] %}
+  # html tags here
+{% endfor %}
+```
+
 ## statuses
 
 for responses that get from network has several ranges:
