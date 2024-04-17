@@ -136,8 +136,17 @@ then in `view.py` do this:
 from django.template.loader import rendoe_to_string
 
 def index(request):
-    response_data = render_to_string('[app\'s name]/[html file].html')
+    response_data = render_to_string('[app name]/[html file].html')
     return HttpResponse(response_data)
+```
+
+### render
+
+for rendering do this:
+
+```python
+def index(request):
+    return render(request, '[app name]\[html file].html')
 ```
 
 ## statuses
