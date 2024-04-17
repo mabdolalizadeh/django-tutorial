@@ -183,7 +183,7 @@ after that you must put a **DTL** in your html file like this:
 
 for add filter to your data use this syntax:
 
-```
+```python
 {{ value|filter }}
 ```
 
