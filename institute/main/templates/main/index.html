@@ -38,30 +38,32 @@
             color: white;
             background-color: #f58626;
             margin: 2%;
-            padding: 15px;
+            padding: 10px;
             border-radius: 7px;
             text-decoration: none;
         }
 
-        nav.nav-links {
+        /*nav.nav-links {
             display: block;
             float: right;
-        }
+        }*/
         
     </style>
 </head>
 <body>
     <header>
-        <div id="nav">
+        <nav id="nav">
             <h1 id="title"> Sha'af Language </h1>
-            <nav class="nav-links">
-                <a href="http://" class="nav-link"> courses </a>
-                <a href="http://" class="nav-link"> books </a>
-                <a href="http://" class="nav-link"> about us </a>
-                <a href="http://" class="nav-link"> contact us </a>
-                <a href="http://" class="nav-link"> sign in/sign up </a>
-            </nav>
-        </div>
+            <div class="nav-links">
+                <ul class="nav-links" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li class="nav-links"> <a href="http://" class="nav-links"> courses </a></li>
+                    <li class="nav-links"> <a href="http://" class="nav-links"> books </a></li>
+                    <li class="nav-links"> <a href="http://" class="nav-links"> about us </a></li>
+                    <li class="nav-links"> <a href="http://" class="nav-links"> contact us </a></li>
+                    <li class="nav-links"> <a href="http://" class="nav-links"> sign in/sign up </a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 </body>
 </html>
