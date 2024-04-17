@@ -120,6 +120,26 @@ def index(request):
     return HttpResponseNotFound('[anything you want]')
 ```
 
+### templates
+
+for using templates first make a directory that name is templates then make another folder in it with name of your application. do this in your app's directory:
+
+```console
+mkdir templates
+cd templates
+mkdir [app's name]
+```
+
+then in `view.py` do this:
+
+```python
+from django.template.loader import rendoe_to_string
+
+def index(request):
+    response_data = render_to_string('[app\'s name]/[html file].html')
+    return HttpResponse(response_data)
+```
+
 ## statuses
 
 for responses that get from network has several ranges:
