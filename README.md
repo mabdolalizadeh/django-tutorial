@@ -149,6 +149,36 @@ def index(request):
     return render(request, '[app name]\[html file].html')
 ```
 
+#### DTL
+
+for using python's codes or django's dynamic data in html, first make a dictionary that you need to get data from it and then you must give it to render function:
+
+```python
+def index(request):
+    context: {
+        'data': [dynamic list]
+    }
+    return render(request, '[app name]\[html file].html', context)
+```
+
+after that you must put a **DTL** in your html file like this:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        {{ data }}
+    </h1>
+</body>
+</html>
+```
+
 ## statuses
 
 for responses that get from network has several ranges:
