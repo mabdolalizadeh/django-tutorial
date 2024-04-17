@@ -179,6 +179,16 @@ after that you must put a **DTL** in your html file like this:
 </html>
 ```
 
+##### built-in filter
+
+for add filter to your data use this syntax:
+
+```
+{{ value|filter }}
+```
+
+if you want to know about what filter we have visit [this](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/).
+
 ## statuses
 
 for responses that get from network has several ranges:
