@@ -199,6 +199,39 @@ for puting python code in your html file you can use tags (this examples is just
 {% endfor %}
 ```
 
+###### **block tag**
+
+always we have some fixed data in a webpage, same tags, same `<body>` or same `<head>` so in here we can make a `base.html` file to put the fixed data in it. `base.html` is in root of our project in directory that we created which name is templates(like other templates).
+
+for using dynamic data you put `block` tag in your `base.html`:
+
+```html
+{% block [name of block] %}
+    [defualt value]
+{% endblock [name of blocl] %}
+
+```
+
+in other **html** file you must just fill the blocks. for this first you must put the direction of file in `settings.py`:
+
+```python
+templates= [
+  {
+    'DIR': [
+        BASE_DIR / "templates"
+    ],
+  }
+]
+```
+
+then in other **html** file in the first line put this:
+
+```html
+{% extends "base.html" %}
+```
+
+and at the end you must make the `block` tag again with the *names you used in base* and **fill** them.
+
 ## statuses
 
 for responses that get from network has several ranges:
