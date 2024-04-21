@@ -232,6 +232,31 @@ then in other **html** file in the first line put this:
 
 and at the end you must make the `block` tag again with the *names you used in base* and **fill** them.
 
+###### **include**
+
+if your webpage has a part that it must share with other pages you can use `include`. for this, first you must make a directory that name is `includes` in your template directory in application. then you put your codes in a html file and after that in other html files that you need do this:
+
+```html
+{% include "[app name]/includes/[file].html" %}
+```
+
+### static files
+
+for adding static files to your application first make directory of it:
+
+```console
+mkdir static
+cd static
+mkdir [apps name]
+```
+
+then for using statics you must put `{% load static %}` in the top of your **html** file and after that:
+
+```html
+{% load static %}
+<link rel="stylesheet" href="{% static "[app name]/[style name].css" %}">
+```
+
 ## statuses
 
 for responses that get from network has several ranges:
