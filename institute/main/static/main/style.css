@@ -6,32 +6,34 @@
         }
 
         #nav {
-            padding: 0;
+            padding: auto;
             background-color: white;
-            margin-top: 0;
             position: fixed;
+            width: 100%;
         }
 
         #title {
             color: #0aaeb8;
             padding: 2%;
-            display: inline;
+            display: block;
         }
 
-        .nav-link:link, .nav-link:visited {
+        a.nav-links {
+            display: flex;
+            justify-content: space-around;
+            text-decoration: none;
+            margin: 0.5rem;
+            padding: 1rem;
+        }
+        a.nav-links:link, a.nav-links:visited {
             color: white;
             background-color: #0aaeb8;
-            margin: 2%;
-            padding: 10px;
             border-radius: 7px;
-            text-decoration: none;
+            transition: ease 0.3s;
         }
 
-        .nav-link:hover, a.nav-link:active {
+        a.nav-links:hover, a.nav-links:active {
             color: white;
             background-color: #f58626;
-            margin: 2%;
-            padding: 10px;
             border-radius: 7px;
-            text-decoration: none;
         }
