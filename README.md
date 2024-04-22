@@ -1,7 +1,7 @@
 # django tutorial
 
 * [notes](#notes)
-* [statuses](#statuses)
+* [status responses](#status-responses)
 
 ## notes
 
@@ -265,7 +265,7 @@ STATICFILES_DIRS = [
 ]
 ```
 
-## statuses
+## status responses
 
 for responses that get from network has several ranges:
 
