@@ -1,69 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sha'af</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
-        
-        * {
-            margin: 0;
-            font-family: 'Sen', sans-serif;
-        }
+{% extends "base.html" %}
+{% load static %}
 
-        #nav {
-            padding: 0;
-            background-color: white;
-            margin-top: 0;
-            position: fixed;
-        }
-
-        #title {
-            color: #0aaeb8;
-            padding: 2%;
-            display: inline;
-        }
-
-        .nav-link:link, .nav-link:visited {
-            color: white;
-            background-color: #0aaeb8;
-            margin: 2%;
-            padding: 10px;
-            border-radius: 7px;
-            text-decoration: none;
-        }
-
-        .nav-link:hover, a.nav-link:active {
-            color: white;
-            background-color: #f58626;
-            margin: 2%;
-            padding: 10px;
-            border-radius: 7px;
-            text-decoration: none;
-        }
-
-        /*nav.nav-links {
-            display: block;
-            float: right;
-        }*/
-        
-    </style>
-</head>
-<body>
-    <header>
-        <nav id="nav">
-            <h1 id="title"> Sha'af Language </h1>
-            <div class="nav-links">
-                <ul class="nav-links" data-in="fadeInDown" data-out="fadeOutUp">
-                    <li class="nav-links"> <a href="http://" class="nav-links"> courses </a></li>
-                    <li class="nav-links"> <a href="http://" class="nav-links"> books </a></li>
-                    <li class="nav-links"> <a href="http://" class="nav-links"> about us </a></li>
-                    <li class="nav-links"> <a href="http://" class="nav-links"> contact us </a></li>
-                    <li class="nav-links"> <a href="http://" class="nav-links"> sign in/sign up </a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-</body>
-</html>
+{% block styles %}
+<link rel="stylesheet" href="{% static 'main/style.css' %}">
+{% endblock %}
+{% block title %}sha'af{% endblock %}
+{% block content %}
+<header>
+    <nav id="nav">
+        <h1 id="title"> Sha'af Language </h1>
+        <div class="nav-links">
+            <ul class="nav-links" data-in="fadeInDown" data-out="fadeOutUp">
+                <li class="nav-links"> <a href="http://" class="nav-links"> courses </a></li>
+                <li class="nav-links"> <a href="http://" class="nav-links"> books </a></li>
+                <li class="nav-links"> <a href="http://" class="nav-links"> about us </a></li>
+                <li class="nav-links"> <a href="http://" class="nav-links"> contact us </a></li>
+                <li class="nav-links"> <a href="http://" class="nav-links"> sign in </a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+{% endblock %}
