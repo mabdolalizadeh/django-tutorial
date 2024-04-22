@@ -257,6 +257,14 @@ then for using statics you must put `{% load static %}` in the top of your **htm
 <link rel="stylesheet" href="{% static "[app name]/[style name].css" %}">
 ```
 
+for having a global static file you must put this settings in `settings.py` file:
+
+```python
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]
+```
+
 ## statuses
 
 for responses that get from network has several ranges:
