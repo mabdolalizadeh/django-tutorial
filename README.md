@@ -262,7 +262,6 @@ then for using statics you must put `{% load static %}` in the top of your **htm
 ```
 
 for having a global static file you must put this settings in `settings.py` file:
-
 ```python
 STATICFILES_DIRS = [
     BASE_DIR / "static"
