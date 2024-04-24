@@ -240,7 +240,7 @@ and at the end you must make the `block` tag again with the *names you used in b
 
 if your webpage has a part that it must share with other pages you can use `include`. for this, first you must make a directory that name is `includes` in your template directory in application. then you put your codes in a html file and after that in other html files that you need do this:
 
-```html
+```djangourlpath
 {% include "[app name]/includes/[file].html" %}
 ```
 
