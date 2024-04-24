@@ -178,6 +178,10 @@ after that you must put a **DTL** in your html file like this:
 </body>
 </html>
 ```
+for having dynamic data except database, you can use a `dictionary` and have access to data value with their keys like this:
+```python
+{{ [data name].[key name] }}
+```
 
 ##### built-in filter
 
