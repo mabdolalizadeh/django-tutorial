@@ -212,7 +212,7 @@ for using dynamic data you put `block` tag in your `base.html`:
 ```html
 {% block [name of block] %}
     [defualt value]
-{% endblock [name of blocl] %}
+{% endblock %}
 
 ```
 
