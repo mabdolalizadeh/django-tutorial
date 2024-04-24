@@ -269,6 +269,7 @@ STATICFILES_DIRS = [
 ]
 ```
 
+
 ## status responses
 
 for responses that get from network has several ranges:
