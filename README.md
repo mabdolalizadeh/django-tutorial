@@ -271,7 +271,7 @@ STATICFILES_DIRS = [
 
 ## status responses
 
-for responses that get from network has several ranges:
+the responses that get from network has several ranges:
 
 1. 200: it means ok
 2. 404: the page isn't exist
