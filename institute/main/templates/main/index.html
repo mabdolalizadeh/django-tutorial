@@ -18,3 +18,14 @@
         <li><a href="">contact us</a></li>
     </ul>
 {% endblock %}
+
+{% block content %}
+	<section id="main">
+        <div class="main">
+            <img src="{% static 'main/images/logo.png' %}" alt="logo">
+            <a href="{% url 'signin' %}">
+                <button type="button" >click to sign in</button>
+            </a>
+        </div>
+    </section>
+{% endblock %}
