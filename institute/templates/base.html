@@ -10,8 +10,13 @@
     {% block styles %}{% endblock %}
   </head>
   <body>
-    {% block header %}{% endblock %}
+    <header>
+        {% block header %}{% endblock %}
+    </header>
     {% block content %}{% endblock %}
-    {% block footer %}{% endblock %}
+
+    <footer>
+        {% block footer %}{% endblock %}
+    </footer>
   </body>
 </html>
