@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    font-family: "Sen", sans-serif;
+}
+
+nav {
+    width: auto;
+    display: flex;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav h1 {
+    color: #03afb9;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 1rem;
+}
+
+nav ul li {
+    padding: 0.5rem;
+}
+
+nav ul li a,
+nav ul li a:link,
+nav ul li a:visited {
+    text-decoration: none;
+    background-color: #03afb9;
+    color: white;
+    border-radius: .4rem;
+    padding: .5rem;
+}
+
+nav ul li a:active,
+nav ul li a:hover {
+    background-color: #f68626;
+    transition: ease .2s;
+}
