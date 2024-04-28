@@ -41,3 +41,11 @@ nav ul li a:hover {
     background-color: #f68626;
     transition: ease .2s;
 }
+
+#main {
+    background-color: #03afb9;
+}
+
+#main div img {
+    width: 1rem;
+}
