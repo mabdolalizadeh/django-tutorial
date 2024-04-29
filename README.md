@@ -1,9 +1,10 @@
 # django tutorial
 
-* [notes](#notes)
+* [django](#django)
+* [data base](#data-base)
 * [status responses](#status-responses)
 
-## notes
+## django
 
 ### create a project
 
@@ -267,6 +268,10 @@ STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
 ```
+
+## data base
+ 
+### models
 
 
 ## status responses
