@@ -4,7 +4,7 @@
 {% block title %}Sha'af{% endblock %}
 
 {% block styles %}
-    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+    <link rel="stylesheet" href="{% static 'main/style.css' %}?{% now 'U' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap" rel="stylesheet">
@@ -23,9 +23,28 @@
 	<section id="main">
         <div class="main">
             <img src="{% static 'main/images/logo.png' %}" alt="logo">
-            <a href="{% url 'signin' %}">
+            <a href="{% url 'signin' %}" target="_blank">
                 <button type="button" >click to sign in</button>
             </a>
+        </div>
+    </section>
+    <section id="courses">
+        <div class="courses">
+            <h1>courses</h1>
+            <div class="images">
+                <div class="kid">
+                    <img src="" alt="">
+                    <p>if you want a shining future for your kid.</p>
+                </div>
+                <div class="teen">
+                    <img src="" alt="">
+                    <p>Learn English is necessary for teens.</p>
+                </div>
+                <div class="adult">
+                    <img src="" alt="">
+                    <p>if you want to migrate.</p>
+                </div>
+            </div>
         </div>
     </section>
 {% endblock %}

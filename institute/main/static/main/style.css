@@ -4,11 +4,12 @@
 }
 
 nav {
-    width: auto;
+    width: 100vw;
     display: flex;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
     flex-direction: row;
     justify-content: space-between;
+    position: fixed;
 }
 
 nav h1 {
@@ -43,9 +44,68 @@ nav ul li a:hover {
 }
 
 #main {
-    background-color: #03afb9;
+    background-color: rgba(0, 86, 90, 0.75);
+    width: 100vw;
+    height: 100vh;
 }
 
-img {
-    width: 1rem;
+#main div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#main div img {
+    width: 15vw;
+    padding: 1rem;
+}
+
+#main div button {
+    background-color: #f68626;
+    border: none;
+    color: white;
+    font-size: .8rem;
+    border-radius: .4rem;
+    font-weight: bold;
+}
+
+#main div a{
+    background-color: #f68626;
+    border: none;
+    padding: .7rem;
+    color: white;
+    font-size: .8rem;
+    border-radius: .4rem;
+    font-weight: bold;
+}
+
+#main div a:hover,
+#main div a:active {
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+}
+
+#main::after {
+    content: "";
+    background: linear-gradient(
+            to right,
+            transparent,
+            rgba(255, 255, 255, 0.5),
+            transparent
+    );
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    transform: rotate(30deg);
+    pointer-events: none;
+    animation: shine 2s forwards;
+}
+
+@keyframes shine {
+    to {
+        transform: translateX(100%) rotate(30deg);
+    }
 }
