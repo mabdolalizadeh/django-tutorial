@@ -272,7 +272,15 @@ STATICFILES_DIRS = [
 ## data base
  
 ### models
+for making a table for your database first you must make a **class** in `models.py` file. you must know about django fields so have look on [this](https://docs.djangoproject.com/en/5.0/ref/models/fields/):
+```python
+from django.db import models
 
+class Name_of_table(models.Model):
+    # put here needs of your datas
+    # these are just examples
+    title = models.CharField(max_length=[something])
+```
 
 ## status responses
 
