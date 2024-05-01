@@ -1,6 +1,12 @@
 * {
     margin: 0;
+    padding: 0;
     font-family: "Sen", sans-serif;
+}
+
+body {
+    margin: 0;
+    overflow-x: revert;
 }
 
 nav {
@@ -45,8 +51,8 @@ nav ul li a:hover {
 
 #main {
     background-color: rgba(0, 86, 90, 0.75);
-    width: 100vw;
-    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
 }
 
 #main div {
@@ -108,4 +114,41 @@ nav ul li a:hover {
     to {
         transform: translateX(100%) rotate(30deg);
     }
+}
+
+#courses {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+#courses h1 {
+    text-align: center;
+    padding: 1rem;
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-size: 2rem;
+    color: #f68626;
+}
+
+
+#courses div .images {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    width: 100%;
+    left: 50%;
+    box-sizing: border-box;
+    background-color: red;
+    justify-content: space-between;
+}
+
+#courses div img {
+    width: 20rem;
+    padding: 1rem;
+}
+
+#courses div p {
+    padding: 1rem;
+    text-align: center;
 }

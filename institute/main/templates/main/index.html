@@ -32,25 +32,12 @@
         <div class="courses">
             <h1>courses</h1>
             <div class="images">
-{#                <div class="kid">#}
-{#                    <img src="{% static 'main/images'|add:data.image %}" alt="{{ data.name }}">#}
-{#                    <p>if you want a shining future for your kid.</p>#}
-{#                </div>#}
-{#                <div class="teen">#}
-{#                    <img src="{% static 'main/images'|add:data.image %}" alt="{{ data.name }}">#}
-{#                    <p>Learn English is necessary for teens.</p>#}
-{#                </div>#}
-{#                <div class="adult">#}
-{#                    <img src="" alt="">#}
-{#                    <p>if you want to migrate.</p>#}
-{#                </div>#}
                 {% for d in data %}
                 	<div class="{{ d.name }}">
                         <img src="{% static 'main/images/'|add:d.image %}" alt="{{ d.name }}">
                         <p>{{ d.text }}</p>
                     </div>
                 {% endfor %}
-
             </div>
         </div>
     </section>

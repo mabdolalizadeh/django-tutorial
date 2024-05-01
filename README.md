@@ -193,7 +193,10 @@ for add filter to your data use this syntax:
 ```
 
 if you want to know about what filter we have visit [this](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/).
-
+for add an attribute to an url use `add` filter:
+```python
+{% static '[url'|add:[new url] %}
+```
 ##### tags
 
 for puting python code in your html file you can use tags (this examples is just for loop. you can see other tags [here]([https://](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/)https://)):
@@ -280,6 +283,12 @@ class Name_of_table(models.Model):
     # put here needs of your datas
     # these are just examples
     title = models.CharField(max_length=[something])
+```
+
+### migration
+for migrating your changes do this in console:
+```console
+python manage.py makemigrations
 ```
 
 ## status responses

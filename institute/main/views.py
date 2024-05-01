@@ -1,26 +1,28 @@
 from django.shortcuts import render
 
-datas = [
-    {
-        'name': "logo",
-        'image': "images/logo.png",
-    },
+data = [
     {
         'name': "kid",
-        'image': "images/kid.jpg"
+        'image': "kid.jpg",
+        'text': "if you want a shining future for your kid."
     },
     {
         'name': "teen",
-        'image': "images/teen.jpg"
+        'image': "teen.jpg",
+        'text': "Learn English is necessary for teens."
     },
     {
         'name': "adult",
-        'image': "images/adult.jpg"
+        'image': "adult.jpg",
+        'text': "Learn English is necessary for adults."
     }
 ]
 
 def index(request):
-    return render(request, 'main/index.html')
+    context = {
+        'data': data
+    }
+    return render(request, 'main/index.html', context)
 
 def signin(request):
     return render(request, 'main/signin.html')
