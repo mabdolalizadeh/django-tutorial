@@ -291,6 +291,11 @@ for migrating your changes do this in console:
 python manage.py makemigrations
 ```
 
+for adding models to database do this:
+```console
+python manage.py migrate
+```
+
 ## status responses
 
 the responses that get from network has several ranges:
