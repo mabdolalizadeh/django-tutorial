@@ -295,6 +295,11 @@ for adding models to database do this:
 ```console
 python manage.py migrate
 ```
+### getting
+for getting set from database you can do this
+```python
+DATABASE_NAME.objects.get([cloumn what you want])
+```
 
 ## status responses
 
