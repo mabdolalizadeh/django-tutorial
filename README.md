@@ -304,6 +304,7 @@ for getting more than one item use `filter()` funtction:
 ```python
 DATABASE_NAME.objects.filter([item])
 ```
+for useing more than sth or lower than something add in end of item `__lt`(lower than),`__lte`.
 
 ## status responses
 
