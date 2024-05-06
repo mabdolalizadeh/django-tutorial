@@ -296,9 +296,13 @@ for adding models to database do this:
 python manage.py migrate
 ```
 ### getting
-for getting set from database you can do this
+for getting set from database you can do this(it must be one item):
 ```python
 DATABASE_NAME.objects.get([cloumn what you want])
+```
+for getting more than one item use `filter()` funtction:
+```python
+DATABASE_NAME.objects.filter([item])
 ```
 
 ## status responses
