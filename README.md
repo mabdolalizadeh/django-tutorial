@@ -304,7 +304,7 @@ for getting more than one item use `filter()` funtction:
 ```python
 DATABASE_NAME.objects.filter([item])
 ```
-for useing more than sth or lower than something add in end of item `__lt`(lower than),`__lte`.
+for useing more than sth or lower than something add in end of item `__lt`(lower than),`__lte`(lower or equal),`__gt`(greater than),`__gte`(greater than or  equal). you can see more in [here](https://docs.djangoproject.com/en/5.0/ref/models/querysets/#field_lookup)
 
 ## status responses
 
