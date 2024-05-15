@@ -1,6 +1,8 @@
 # django tutorial
 
 * [django](#django)
+  - [create](#create-a-project)
+  - [run](#run-server)
 * [data base](#data-base)
 * [status responses](#status-responses)
 
