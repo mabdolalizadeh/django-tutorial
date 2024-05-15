@@ -1,9 +1,20 @@
 # django tutorial
 
 * [django](#django)
-  - [create](#create-a-project)
-  - [run](#run-server)
+  - [create a project](#create-a-project)
+  - [run server](#run-server)
+  - [start app](#starting-app)
+  - (urls)[#urls)
+  - (views)(#views)
+  - [templates](#templates)
+  - [render](#render)
+  - [static files](#static-files)
 * [data base](#data-base)
+  - [models](#models)
+  - [migration](#migration)
+  - [getting](#getting)
+  - [loading](#loading)
+  - [slug](#slug)
 * [status responses](#status-responses)
 
 ## django
