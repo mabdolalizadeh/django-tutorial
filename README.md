@@ -306,6 +306,23 @@ DATABASE_NAME.objects.filter([item])
 ```
 for useing more than sth or lower than something add in end of item `__lt`(lower than),`__lte`(lower or equal),`__gt`(greater than),`__gte`(greater than or  equal). you can see more in [here](https://docs.djangoproject.com/en/5.0/ref/models/querysets/#field_lookup)
 
+### loading
+for loading with primary key use this function in `views.py` (this function if it doesn't have any response rais 404 instead):
+```python
+from django.shortcuts import get_object_or_404
+
+def index(request, primary_key):
+  response = get_object_or_404(CLASS_NAME, pk=primary_key)
+```
+
+in `models.py` you can add a function that give you url base of parameter you need:
+```python
+from django.urls import reverse
+
+def get_absolute_url(self):
+  return return reverse('URL_NAME', args=[self.PARAMETER])
+```
+
 ## status responses
 
 the responses that get from network has several ranges:
