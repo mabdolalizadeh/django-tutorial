@@ -322,6 +322,18 @@ from django.urls import reverse
 def get_absolute_url(self):
   return return reverse('URL_NAME', args=[self.PARAMETER])
 ```
+### slug
+slug is something that put dash(-) instead of spaces in your title for example *temp title* -> *temp-title*. for use it you must import it then use it as a field in data base. after that override method of save:
+```python
+from django.utils.text import slugify
+
+class DATA_BASE:
+  slug = SlugField(defult="", null=False)
+
+  def save(self, *args, **kwargs):
+    self.slug = slugify(self.title)
+    super().save(*args, **kwargs)
+```
 
 ## status responses
 
