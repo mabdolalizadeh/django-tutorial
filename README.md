@@ -15,6 +15,7 @@
   - [getting](#getting)
   - [loading](#loading)
   - [slug](#slug)
+  - [admin](#admin)
 * [status responses](#status-responses)
 
 ## django
@@ -297,6 +298,10 @@ class Name_of_table(models.Model):
     # these are just examples
     title = models.CharField(max_length=[something])
 ```
+if you wan’t something can’t edit from admin you can add `editable=False` in constructor of that module. for example:
+```python
+slug = models.SlugField(editable=False)
+```
 
 ### migration
 for migrating your changes do this in console:
@@ -346,6 +351,18 @@ class DATA_BASE:
   def save(self, *args, **kwargs):
     self.slug = slugify(self.title)
     super().save(*args, **kwargs)
+```
+
+### admin
+for editing admin page you can make a new class in `admin.py`, and in end you must pass it to `admin.site.register` function:
+```python
+class NAMEAdmin(admin.ModelAdmin):
+	readonly_fields = [‘NAME_OF_FIELD’] # list of fields that you want make it read only
+	prepopulated_fields = { ’NAME_OF_FIELD : [‘NAME_OF_FIELDS’] } # dictionary that says the field complete 	base on which filed
+	list_display = [‘NAME_OF_FIELDS’, ‘__str__’] # put fields that you want to show the value of that in the main 	list
+	list_filter = [‘NAME_OF_FIELDS’] # filter base on one or some fields
+
+admin.site.register(models.DATABASE_NAME, NAMEAdmin)
 ```
 
 ## status responses
