@@ -16,6 +16,7 @@
   - [loading](#loading)
   - [slug](#slug)
   - [admin](#admin)
+  - [relations](#relations)
 * [status responses](#status-responses)
 
 ## django
@@ -357,15 +358,18 @@ class DATA_BASE:
 for editing admin page you can make a new class in `admin.py`, and in end you must pass it to `admin.site.register` function:
 ```python
 class NAMEAdmin(admin.ModelAdmin):
-	readonly_fields = [‘NAME_OF_FIELD’] # list of fields that you want make it read only
-	prepopulated_fields = { ’NAME_OF_FIELD : [‘NAME_OF_FIELDS’] } # dictionary that says the field complete 	base on which filed
-	list_display = [‘NAME_OF_FIELDS’, ‘__str__’] # put fields that you want to show the value of that in the main 	list
-	list_filter = [‘NAME_OF_FIELDS’] # filter base on one or some fields
+	readonly_fields = ['NAME_OF_FIELD'] # list of fields that you want make it read only
+	prepopulated_fields = { 'NAME_OF_FIELD' : ['NAME_OF_FIELDS'] } # dictionary that says the field complete 	base on which filed
+	list_display = ['NAME_OF_FIELDS', '__str__'] # put fields that you want to show the value of that in the main 	list
+	list_filter = ['NAME_OF_FIELDS'] # filter base on one or some fields
 	list_edtitable = ['NAME_OF_LIST'] # with this option you can edit any field you want  just from the list ,without opening it
 
 admin.site.register(models.DATABASE_NAME, NAMEAdmin)
 ```
-
+### relations
+for tables we have three relations **one to one**, **one to many**, **many to many**.  have a look on [this](https://jamboard.google.com/d/1ZlVUVBwfMy_vE-jSylpoiymbqBPauDAQlzoO0HYUDTI/edit?usp=sharing).
+#### one to one
+one to one means a field in one table can just have relation with a only one in another.
 ## status responses
 
 the responses that get from network has several ranges:
