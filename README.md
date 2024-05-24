@@ -361,6 +361,7 @@ class NAMEAdmin(admin.ModelAdmin):
 	prepopulated_fields = { ’NAME_OF_FIELD : [‘NAME_OF_FIELDS’] } # dictionary that says the field complete 	base on which filed
 	list_display = [‘NAME_OF_FIELDS’, ‘__str__’] # put fields that you want to show the value of that in the main 	list
 	list_filter = [‘NAME_OF_FIELDS’] # filter base on one or some fields
+	list_edtitable = ['NAME_OF_LIST'] # with this option you can edit any field you want  just from the list ,without opening it
 
 admin.site.register(models.DATABASE_NAME, NAMEAdmin)
 ```
