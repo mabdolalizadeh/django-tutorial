@@ -9,7 +9,7 @@
   - [templates](#templates)
   - [render](#render)
   - [static files](#static-files)
-* [data base](#data-base)
+* [database](#database)
   - [models](#models)
   - [migration](#migration)
   - [getting](#getting)
@@ -221,6 +221,11 @@ for puting python code in your html file you can use tags (this examples is just
   # html tags here
 {% endfor %}
 ```
+for product and division you can use `widthratio` tag:
+```python
+{% widthratio a 1 b %} # this use for multiply
+{% widthratio a b 1 %} # this use for division
+```
 
 ###### **block tag**
 
@@ -287,7 +292,7 @@ STATICFILES_DIRS = [
 ]
 ```
 
-## data base
+## database
  
 ### models
 for making a table for your database first you must make a **class** in `models.py` file. you must know about django fields so have look on [this](https://docs.djangoproject.com/en/5.0/ref/models/fields/):
@@ -368,8 +373,10 @@ admin.site.register(models.DATABASE_NAME, NAMEAdmin)
 ```
 ### relations
 for tables we have three relations **one to one**, **one to many**, **many to many**.  have a look on [this](https://jamboard.google.com/d/1ZlVUVBwfMy_vE-jSylpoiymbqBPauDAQlzoO0HYUDTI/edit?usp=sharing).
-#### one to one
-one to one means a field in one table can just have relation with a only one in another.
+for pointing to another table we can use `models.ForeignKey` module:
+```python
+FIELD = model.ForeignKey(NAME_OF_TABLE, on_delete=models.CASCADE) # cascade means if table has been deleted, delete this product
+```
 ## status responses
 
 the responses that get from network has several ranges:
