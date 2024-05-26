@@ -371,12 +371,29 @@ class NAMEAdmin(admin.ModelAdmin):
 
 admin.site.register(models.DATABASE_NAME, NAMEAdmin)
 ```
+#### Meta class
+mata class use for more option for models in admin we make it in class model:
+```python
+class MODEL_NAME(models.Model):
+	class Meta:
+		verbose_name = '' # this is name instead of class name
+		verbose_name_plural = '' # this name use for plural names instead 
+```
 ### relations
 for tables we have three relations **one to one**, **one to many**, **many to many**.  have a look on [this](https://jamboard.google.com/d/1ZlVUVBwfMy_vE-jSylpoiymbqBPauDAQlzoO0HYUDTI/edit?usp=sharing).
 for pointing to another table we can use `models.ForeignKey` module:
 ```python
 FIELD = model.ForeignKey(NAME_OF_TABLE, on_delete=models.CASCADE) # cascade means if table has been deleted, delete this product
 ```
+or for one to one relations use this. one to one use for user informations:
+```python
+FIELD = model.OneToOneField(TABLE_NAME, on_delete=models.CASCADE)
+```
+and filnally for many to many use this. many to many use for tags:
+```python
+FIELD = model.ManyToMany(TABLE_NAME)
+```
+
 ## status responses
 
 the responses that get from network has several ranges:
