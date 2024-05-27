@@ -358,6 +358,11 @@ class DATA_BASE:
     self.slug = slugify(self.title)
     super().save(*args, **kwargs)
 ```
+### soft delete
+sometimes we mustn't delete completely, because with this we lost 2 or more product not one. for this reason we have something that called soft delete. we put a boolean field:
+```python
+is_deleted = models.BooleanField()
+```
 
 ### admin
 for editing admin page you can make a new class in `admin.py`, and in end you must pass it to `admin.site.register` function:
