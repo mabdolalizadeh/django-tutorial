@@ -310,7 +310,7 @@ and next you must add it to your template:
 .
 .
 {% render ‘ADDRESS_OF_VIEW’ %}
-
+```
 ### forms
 
 
