@@ -9,6 +9,8 @@
   - [templates](#templates)
   - [render](#render)
   - [static files](#static-files)
+  - [function view partial](#function-view-partial)
+  - [forms](#forms)
 * [database](#database)
   - [models](#models)
   - [migration](#migration)
@@ -291,6 +293,26 @@ STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
 ```
+### function view partial
+we need our `_layout.html` be more cleaner so we can load some elements that are need to have request to database and also load in many pages, put in another **html** file and then use render partial app:
+```console
+pip install django-render-partial
+```
+and then put in `settings.py` in installed app. after that make a function in `view.py`:
+```python
+def PARTIAL_TEST(request):
+	return render(request, ‘HTML_NAME_OF_THE_ELEMENTS.html’)
+```
+and next you must add it to your template:
+```html
+{% load render_partial %}
+.
+.
+.
+{% render ‘ADDRESS_OF_VIEW’ %}
+
+### forms
+
 
 ## database
  
@@ -398,6 +420,7 @@ and filnally for many to many use this. many to many use for tags:
 ```python
 FIELD = model.ManyToMany(TABLE_NAME)
 ```
+
 
 ## status responses
 
