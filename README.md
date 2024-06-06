@@ -312,6 +312,14 @@ and next you must add it to your template:
 {% render ‘ADDRESS_OF_VIEW’ %}
 ```
 ### forms
+> **get** in form method means send in url and **post** means send in head.
+for using django forms first make a new file with name `forms.py` then do this in it:
+```python
+from django import forms
+
+class NAME_OF_CLASS(forms.Form):
+	# here is like models but use forms. instead of models.
+```
 
 
 ## database
