@@ -329,6 +329,7 @@ class NAME_OF_FORM(forms.ModelForm):
 	class Meta:
 		model = NAME_OF_MODEL
 		fields = ['FIELDS'] # add name of fields that you want to show. if you need all fields use __all__
+		exclude = ['FIELDS'] # add name of fields that you want not to show.
 ```
 
 ## database
