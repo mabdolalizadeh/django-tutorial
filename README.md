@@ -137,6 +137,7 @@ from django.http import HttpResponseNotFound
 def index(request):
     return HttpResponseNotFound('[anything you want]')
 ```
+#### class base view
 
 ### templates
 
@@ -336,6 +337,11 @@ class NAME_OF_FORM(forms.ModelForm):
 		labels = {
 			'FIELD': 'NAME THAT YOU WANT TO SHOW'
 			} # names that shows to client
+		error_messages = {
+			'FIELD': {
+				'EROR_TYPE': "message"
+				}
+			} # for handling the errors
 ```
 
 ## database
