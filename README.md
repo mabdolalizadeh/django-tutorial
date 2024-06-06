@@ -320,7 +320,16 @@ from django import forms
 class NAME_OF_CLASS(forms.Form):
 	# here is like models but use forms. instead of models.
 ```
+if you want your form inherit a model use `forms.ModelForm` instead of `forms.Form`:
+```python
+from django import forms
+from .models import NAME_OF_MODEL
 
+class NAME_OF_FORM(forms.ModelForm):
+	class Meta:
+		model = NAME_OF_MODEL
+		fields = ['FIELDS'] # add name of fields that you want to show. if you need all fields use __all__
+```
 
 ## database
  
