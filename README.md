@@ -330,6 +330,12 @@ class NAME_OF_FORM(forms.ModelForm):
 		model = NAME_OF_MODEL
 		fields = ['FIELDS'] # add name of fields that you want to show. if you need all fields use __all__
 		exclude = ['FIELDS'] # add name of fields that you want not to show.
+		widgets = {
+			'FIELD': forms.TextInput(attr={})
+			} # dictionary of each field and its attributes
+		labels = {
+			'FIELD': 'NAME THAT YOU WANT TO SHOW'
+			} # names that shows to client
 ```
 
 ## database
