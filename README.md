@@ -155,7 +155,66 @@ urlpatterns = [
 	path('[NAME]', views.NAME_OF_CLASS_VIEW.as_view(), name='NAME_OF_URL')
 ]
 ```
+#### Template View
+another good things in class view base is template views:
+```python
+from django.views.generic.base import TemplateView
 
+class Test(TemplateView):
+	template_name = 'ADRESS_OF_URL'
+
+	def get_context_data(self, **kwargs): # for context
+		context = super().get_context_data(**kwargs)
+		slug = kwargs['slug'] # if you need to get from database. slug is just an example
+		context['NAME_OF_NEW_FIELD] = 'DATAS'
+		return context
+```
+#### List View
+for listing things you can use list view:
+```python
+from django.views.generic import ListView
+
+class Test(ListView):
+	template_name = 'ADRESS_OF_URL'
+	model = MODEL_NAME # in template you have access to data with object_list name
+	context_object_name = 'NAME_THAT_YOU_WANT'
+	# use def get to work with database and generate base_query
+	def get_queryset(self):
+		base_query = super().get_queryset()
+		data = base_query.filter()
+```
+
+#### Detail View
+it use for showing details of data:
+```python
+from django.views.generic import DetailView
+
+class Test(DetailView):
+	template_name = 'ADRESS_OF_URL'
+	model = MODEL_NAME
+
+	# use def get to work with database and generate base_query
+	def get_queryset(self):
+		base_query = super().get_queryset()
+		data = base_query.filter()
+```
+> for working with detail views in `urls.py` you must is `<slug:slug>` or `<int:pk>`
+
+#### Form View
+naturally it use for forms:
+```python
+from django.views.generic.edit import FormView
+
+class Test(FormView):
+	template_name = 'ADRESS_OF_URL'
+	form_class = FORM_NAME # in template you have access to form with form name
+	success_url = 'URL' # the page that you want to redirect after submiting
+
+	def form_valid(self, form):
+		form.save()
+		return super().form_valid(form)
+	
+```
 ### templates
 
 for using templates first make a directory that name is templates then make another folder in it with name of your application. do this in your app's directory:
