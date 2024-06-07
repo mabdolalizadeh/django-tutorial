@@ -6,6 +6,7 @@
   - [start app](#starting-app)
   - [urls](#urls)
   - [views](#views)
+  - [class base view](#class-base-view)
   - [templates](#templates)
   - [render](#render)
   - [static files](#static-files)
@@ -137,7 +138,23 @@ from django.http import HttpResponseNotFound
 def index(request):
     return HttpResponseNotFound('[anything you want]')
 ```
-#### class base view
+### class base view
+class base views are like function base views, we make it in `views.py`:
+```python
+class NAME_OF_CLASS_VIEW(View):
+	def get(self, request)
+		pass
+	def post(self, request)
+		pass
+```
+and then in `urls.py` add it:
+```python
+from . import views
+
+urlpatterns = [
+	path('[NAME]', views.NAME_OF_CLASS_VIEW.as_view(), name='NAME_OF_URL')
+]
+```
 
 ### templates
 
