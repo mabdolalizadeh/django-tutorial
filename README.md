@@ -465,19 +465,19 @@ for storing file you have many methods.
    		file.save()
    		return redirect('SOMEWHERE')
    ```
-   > for serving the uploaded medias you add it in `settings.py`:
-   > ```python
-   > MEDIA_URL = 'NAME'
-   > ```
-   > and then in main `urls.py` add it:
-   > ```python
-   > from django.conf.urls.static import static
-   > from djanfo.conf import settings
-   >
-   > urlpatterns = [
-   > ...
-   > ] + static(settings.MEDIA_URL, document_root=setiings.MEDIA_ROOT)
-   > ```
+> for serving the uploaded medias you add it in `settings.py`:
+> ```python
+> MEDIA_URL = 'NAME'
+> ```
+> and then in main `urls.py` add it:
+> ```python
+> from django.conf.urls.static import static
+> from djanfo.conf import settings
+>
+> urlpatterns = [
+> ...
+> ] + static(settings.MEDIA_URL, document_root=setiings.MEDIA_ROOT)
+> ```
    
 ## database
  
