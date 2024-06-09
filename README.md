@@ -20,6 +20,7 @@
   - [slug](#slug)
   - [admin](#admin)
   - [relations](#relations)
+  - [session](#session)
 * [status responses](#status-responses)
 
 ## django
@@ -585,8 +586,11 @@ and filnally for many to many use this. many to many use for tags:
 ```python
 FIELD = model.ManyToMany(TABLE_NAME)
 ```
-
-
+### session
+session is something like temprory database for saving in session:
+```python
+reqeust.session["NAME"] = THING_THAT_YOU_WANT_TO_SAVE
+```
 ## status responses
 
 the responses that get from network has several ranges:
