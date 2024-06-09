@@ -215,6 +215,16 @@ class Test(FormView):
 		return super().form_valid(form)
 	
 ```
+#### Create View
+it's like form view whit this difference that it doesn't need to override `form_valid()` function:
+```python
+from django.views.generic.edit import CreateView
+
+class Test(CreateView):
+	template_name = 'ADRESS_OF_URL'
+	form_class = FORM_NAME # in template you have access to form with form name
+	success_url = 'URL' # the page that you want to redirect after submiting
+```
 ### templates
 
 for using templates first make a directory that name is templates then make another folder in it with name of your application. do this in your app's directory:
@@ -419,7 +429,13 @@ class NAME_OF_FORM(forms.ModelForm):
 				}
 			} # for handling the errors
 ```
-
+#### Uploading
+for uploading data in your form you have to add `input` with type file and form has to have `enctype` attribute:
+```html
+<form action="" method="post" enctype="multipart/form-data"<
+<input type="file">
+```
+> for have access to uploaded files use `request.FILES`.
 ## database
  
 ### models
