@@ -436,6 +436,49 @@ for uploading data in your form you have to add `input` with type file and form 
 <input type="file">
 ```
 > for have access to uploaded files use `request.FILES`.
+
+for storing file you have many methods.
+1. **python** and using function
+   ```python
+	def store_files(file):
+	with open("temp/image.jpg", "wb+") as dest: # you must create temp directory in root of your project
+		for chunk in file.chunks():
+			dest.write(chunk)
+   ```
+2. using **djangos** syntax and *database* and *model form*:
+   first add a field to your model that want to save the file:
+   ```python
+   file = models.FileField(uploat_to='NAME') # this NAME is a sub directory in media root
+   ```
+   and then add an adress to `settings.py`:
+   ```python
+   MEDIA_ROOT = BASE_DIR / 'NAME'
+   ```
+   and in the end do this in view:
+   ```python
+   class SampleUpload(View):
+   	def get(self, request):
+		pass
+
+   	def post(self, request):
+   		file = SAMPLE_MODEL(file=request.FILES['NAME_OF_INPUT'])
+   		file.save()
+   		return redirect('SOMEWHERE')
+   ```
+   > for serving the uploaded medias you add it in `settings.py`:
+   > ```python
+   > MEDIA_URL = 'NAME'
+   > ```
+   > and then in main `urls.py` add it:
+   > ```python
+   > from django.conf.urls.static import static
+   > from djanfo.conf import settings
+   >
+   > urlpatterns = [
+   > ...
+   > ] + static(settings.MEDIA_URL, document_root=setiings.MEDIA_ROOT)
+   > ```
+   
 ## database
  
 ### models
