@@ -595,6 +595,19 @@ and for getting:
 ```python
 session_id = request.session.get('NAME')
 ```
+
+### User
+for changing user model do this in `models.py`:
+```python
+from django.contrib.auth.models import AbstractUser
+
+class User(AbstractUser):
+	# fields that you want to add in to user model
+```
+and then clarify it to django in `settings.py`:
+```python
+AUTH_USER_MODEL = 'PATH TO MODEL'
+```
 ## status responses
 
 the responses that get from network has several ranges:
