@@ -179,6 +179,8 @@ class Test(ListView):
 	template_name = 'ADRESS_OF_URL'
 	model = MODEL_NAME # in template you have access to data with object_list name
 	context_object_name = 'NAME_THAT_YOU_WANT'
+	ordering = []
+	paginate_by = int #it means each page has how many product
 	# use def get to work with database and generate base_query
 	def get_queryset(self):
 		base_query = super().get_queryset()
