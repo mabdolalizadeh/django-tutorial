@@ -589,7 +589,11 @@ FIELD = model.ManyToMany(TABLE_NAME)
 ### session
 session is something like temprory database for saving in session:
 ```python
-reqeust.session["NAME"] = THING_THAT_YOU_WANT_TO_SAVE
+request.session["NAME"] = THING_THAT_YOU_WANT_TO_SAVE
+```
+and for getting:
+```python
+session_id = request.session.get('NAME')
 ```
 ## status responses
 
