@@ -187,6 +187,13 @@ class Test(ListView):
 		data = base_query.filter()
 ```
 
+for paging in template:
+```html
+{% for page in paginator.page_range %}
+<li><a>page</a></li>
+{% endfor %}
+```
+
 #### Detail View
 it use for showing details of data:
 ```python
@@ -609,6 +616,11 @@ class User(AbstractUser):
 and then clarify it to django in `settings.py`:
 ```python
 AUTH_USER_MODEL = 'PATH TO MODEL'
+```
+for checking same users:
+```python
+user_phone = form.get(‘phone’)
+user: bool = User.object.filter(phone__iexact=user_phone).exists()
 ```
 ## status responses
 
