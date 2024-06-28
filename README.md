@@ -622,6 +622,10 @@ for checking same users:
 user_phone = form.get(‘phone’)
 user: bool = User.object.filter(phone__iexact=user_phone).exists()
 ```
+for saving cookies of login:
+```python
+from django.contrib.auth import login, logout
+```
 ## status responses
 
 the responses that get from network has several ranges:
